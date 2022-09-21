@@ -8,12 +8,14 @@ router.route("/")
     .post(contacts.create)
     .delete(contacts.deleteALL);
 
-router.route("/favorite")
-    .get(contacts.findALLFavorite);
 
-router.route("/:id")
+    router.route("/:id")
     .get(contacts.findOne)
     .put(contacts.update)
     .delete(contacts.delete);
+    
+router.route("/favorite")
+    .get(contacts.findALLFavorite);
+
 
 module.exports = router;
